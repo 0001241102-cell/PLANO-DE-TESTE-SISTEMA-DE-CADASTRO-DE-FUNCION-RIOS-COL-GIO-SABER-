@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários | Colégio Saber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">🎓</div>
+        <div>
+            <h1>Colégio Saber</h1>
+            <p>Instituição de Ensino</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="titulo-pagina">
+            <h2>Cadastro de Funcionários</h2>
+            <p>Preencha os campos abaixo para cadastrar um novo funcionário.</p>
+        </section>
+
+        <form id="formCadastro" novalidate>
+
+            <h3>Dados pessoais</h3>
+
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="Digite o nome completo">
+                <small class="erro" id="erroNome"></small>
+            </div>
+
+            <div class="campo">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" placeholder="Rua, número e bairro">
+                <small class="erro" id="erroEndereco"></small>
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com">
+                    <small class="erro" id="erroEmail"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15">
+                    <small class="erro" id="erroTelefone"></small>
+                </div>
+            </div>
+
+            <h3>Informações profissionais</h3>
+
+            <div class="campo">
+                <label for="cargo">Cargo</label>
+                <select id="cargo">
+                    <option value="">Selecione um cargo</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Diretor">Diretor</option>
+                    <option value="Coordenador Pedagógico">Coordenador Pedagógico</option>
+                    <option value="Secretário Escolar">Secretário Escolar</option>
+                    <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
+                </select>
+                <small class="erro" id="erroCargo"></small>
+            </div>
+
+            <div class="campo">
+                <label for="salario">Salário</label>
+                <input type="text" id="salario" placeholder="R$ 0,00" inputmode="numeric">
+                <small class="erro" id="erroSalario"></small>
+            </div>
+
+            <div class="campo">
+                <label>Turno de trabalho</label>
+
+                <div class="opcoes-turno">
+                    <label class="opcao">
+                        <input type="radio" name="turno" value="Manhã">
+                        Manhã
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="turno" value="Tarde">
+                        Tarde
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="turno" value="Noite">
+                        Noite
+                    </label>
+                </div>
+
+                <small class="erro" id="erroTurno"></small>
+            </div>
+
+            <button type="submit" class="botao">
+                Cadastrar funcionário
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 Colégio Saber. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
